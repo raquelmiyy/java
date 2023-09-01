@@ -1,63 +1,71 @@
 import java.util.ArrayList;
-import java.util.List;
+import java.util.List;  //pacote
 
 public class ExemploLista {
     public static void main(String[] args) {
-        // Não usaremos uma simples variável
-        // e sim um OBJETO, criamos objetos usando new
+        /* lista é uma classe
+        * ja tem métodos prontos
+        *
+        * */
 
-        // Métodos que mais usaremos:
-        // add - adiciona objeto na lista
-        // get - busca elemento de acordo com indice
-        // size - retorna o tamanho da lista
-        // remove - remover objeto da lista
+        //objeto
+        // new para identificar um objeto
+        //instancia
+        // criar listas de tipos específicos
+        // métodos que mais usaremos ( add , get - retornar um elemento)
         List listaEstranha = new ArrayList();
-        listaEstranha.add("Xampson");
-        listaEstranha.add(42);
-        listaEstranha.add(true);
-        listaEstranha.add(42.5);
 
-        // Devemos criar listas de tipos especificos:
+        listaEstranha.add(21); //adiciona de maneira sequencial
+        listaEstranha.add(true);
+        listaEstranha.add(21.2);
+
+//        System.out.println(listaEstranha);
+          //listas no plural e variavel no singular
         List<String> nomes = new ArrayList();
-        nomes.add("Xampson");
-        nomes.add("William");
-        nomes.add("Giuliana");
-        nomes.add("Bob");
-        nomes.add("Maria");
-        nomes.add("José");
+        nomes.add("Raquel");
+        nomes.add("Marcella");
+        nomes.add("João");
+        nomes.add("Melissa");
+        nomes.add("Beatriz");
 
         System.out.println(nomes);
 
-        String segundoNome = nomes.get(1);
-        System.out.println("O segundo nome é: " + segundoNome);
+        //size - retorna o tamanho da lista
 
-        for(int i = 0; i < nomes.size(); i++){
+        String segundoNome = nomes.get(1);
+        System.out.println("o segundo nome: " + segundoNome);
+
+        for (int i = 0; i < nomes.size(); i++) {
             System.out.println(i + " - " + nomes.get(i));
         }
 
-        //Removendo um elemento
-        // o ideal é remover pelo indice
-        nomes.remove(0);
+        //removendo um elemento   (o ideal é remover pelo indice)
+        nomes.remove(3);
+        System.out.println(nomes);
 
-        String nomeRemover = "Bob";
-        for(int i = 0; i < nomes.size(); i++){
-            String nomeDaVez = nomes.get(i);
-            if(nomeDaVez.equals(nomeRemover)){
+        //comparar strings .equal
+        // remove - remover objeto da lista
+        String nomeRemover = "Beatriz";
+        for (int i = 0; i < nomes.size(); i++){
+            if (nomes.get(i).equals(nomeRemover)){
                 nomes.remove(i);
             }
         }
+        System.out.println(nomes);
 
-        System.out.println("Nomes após remover: "
-                + nomes);
 
-        // Adiciona e "empurra" os outros elementos para baixo
-        nomes.add(0, "Teste");
+        nomes.add(0,"Denise");
+        System.out.println(nomes);
 
-//        nomes.clear(); // limpa toda a lista
-//        nomes.removeAll(nomesQueQueroRemover);
+        nomes.clear(); //limpa toda a lista
 
-        if(nomes.isEmpty()){
-            System.out.println("Sem nomes da lista :(");
+        // se a lista estiver vazia
+        List testeIsEmpty = new ArrayList();
+        if (testeIsEmpty.isEmpty()){
+            System.out.println("Sem nomes na lista.");
         }
+
+
+
     }
 }
