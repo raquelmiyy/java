@@ -1,2 +1,2 @@
 # java
-Exercicios da aula de java
+Exercicios da LP
