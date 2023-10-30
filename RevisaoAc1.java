@@ -4,7 +4,7 @@ public class RevisaoAc1 {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
 
-        Double saldo = 0.0;
+        Integer pontos = 0;
 
         Integer contador = 0;
         do {
@@ -44,7 +44,7 @@ public class RevisaoAc1 {
                 Integer mes = 1;
                 while (mes <= 12){
                     saldoComRendimento = saldoComRendimento * 1.1;
-                    System.out.println(String.format(" Mês %d | Saldo: %.2f |",mes,saldoComRendimento));
+                    Systecom.out.println(String.format(" Mês %d | Saldo: %.2f |",mes,saldoComRendimento));
                     mes ++;
                 }
             }
