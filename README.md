@@ -1,3 +1,3 @@
 # java
-Exercicios da LP
+Exercicios de LP
 https://www.beecrowd.com.br/judge/en/categories
