@@ -1,4 +1,7 @@
+package resolucao.rh;
+
 public class Colaborador {
+
     private String nome;
     private String cargo;
     private Double salario;
@@ -13,11 +16,19 @@ public class Colaborador {
         return nome;
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
     public String getCargo() {
         return cargo;
     }
 
-    public double getSalario() {
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public Double getSalario() {
         return salario;
     }
 
@@ -25,7 +36,12 @@ public class Colaborador {
         this.salario = salario;
     }
 
-    public void setCargo(String novoCargo) {
+    @Override
+    public String toString() {
+        return "Colaborador{" +
+                "nome='" + nome + '\'' +
+                ", cargo='" + cargo + '\'' +
+                ", salario=" + salario +
+                '}';
     }
 }
-

@@ -1,30 +1,44 @@
+package resolucao.rh;
+
 public class RecursosHumanos {
 
-        private Integer totalPromovidos;
-        private Integer totalSalariosReajustados;
+    private Integer totalDePromovidos;
+    private Integer totalDeReajustados;
 
-        public void reajustar(Colaborador colaborador, Double valorReajuste) {
-            double novoSalario = colaborador.getSalario() + valorReajuste;
+    public RecursosHumanos() {
+        totalDePromovidos = 0;
+        totalDeReajustados = 0;
+    }
+
+    public void reajustarSalario(Colaborador colaborador, Double reajuste) {
+        totalDeReajustados++;
+        colaborador.setSalario(colaborador.getSalario() + reajuste);
+    }
+
+    public void promoverColaborador(Colaborador colaborador, String novoCargo,
+                                    Double novoSalario) {
+        if (novoSalario > colaborador.getSalario()) {
+            colaborador.setCargo(novoCargo);
             colaborador.setSalario(novoSalario);
-            totalSalariosReajustados++;
-        }
-
-        public void promover(Colaborador colaborador, String novoCargo, Double novoSalario) {
-            if (novoSalario > colaborador.getSalario()) {
-                colaborador.setCargo(novoCargo);
-                colaborador.setSalario(novoSalario);
-                totalPromovidos++;
-            } else {
-                System.out.println("operação invalida");
-            }
-        }
-
-        public int getTotalPromovidos() {
-            return totalPromovidos;
-        }
-
-        public int getTotalSalariosReajustados() {
-            return totalSalariosReajustados;
+            totalDePromovidos++;
+        } else {
+            System.out.println("operação inválida");
         }
     }
 
+    public Integer getTotalDePromovidos() {
+        return totalDePromovidos;
+    }
+
+    public void setTotalDePromovidos(Integer totalDePromovidos) {
+        this.totalDePromovidos = totalDePromovidos;
+    }
+
+    public Integer getTotalDeReajustados() {
+        return totalDeReajustados;
+    }
+
+    public void setTotalDeReajustados(Integer totalDeReajustados) {
+        this.totalDeReajustados = totalDeReajustados;
+    }
+}
