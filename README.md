@@ -1,3 +1,2 @@
-# java
-Exercicios de LP
-https://www.beecrowd.com.br/judge/en/categories
+# 2ADS - Linguagem de Programação
+
